@@ -18,7 +18,6 @@ Check out config/config.yaml
 
 ## Running Sheepy
 
-    cd sheepy-bot
     ./sheepy.rb
 
 
