@@ -2,7 +2,7 @@
 
 ## About
 
-Simple IRC bot based off [Cinch](https://github.com/cinchrb/cinch)
+Simple IRC bot based on [Cinch](https://github.com/cinchrb/cinch)
 
 ## Install
 
