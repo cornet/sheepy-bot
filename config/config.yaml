@@ -1,0 +1,6 @@
+bot:
+    server:   localhost
+    port:     6667
+    nick:     sheepy
+    channels: ['#sheepy']
+    verbose:  true
