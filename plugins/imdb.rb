@@ -3,7 +3,7 @@ require 'filmbuff'
 class IMDb
   include Cinch::Plugin
   plugin "imdb"
-  help "!imdb <title> - Search for file <title>"
+  help "!imdb <title> - Search for film <title>"
 
   match /imdb (.+)/i
 
