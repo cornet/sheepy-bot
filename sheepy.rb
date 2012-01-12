@@ -3,14 +3,15 @@
 require 'yaml'
 require 'cinch'
 require './lib/config.rb'
-Dir["./plugins/*.rb"].each {|file| require file }
+require './lib/webserver.rb'
 
+Dir["./plugins/*.rb"].each {|file| require file }
 
 config = Conf.new(YAML.load_file("./config/config.yaml"))
 
 p config
 
-sheepy = Cinch::Bot.new do
+$sheepy = Cinch::Bot.new do
   configure do |c|
     c.server          = config.bot.server
     c.port            = config.bot.port
@@ -25,4 +26,8 @@ sheepy = Cinch::Bot.new do
   end
 end
 
-sheepy.start
+Thread.new do
+  $sheepy.start
+end
+
+WebServer.run!
