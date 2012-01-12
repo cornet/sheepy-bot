@@ -7,17 +7,15 @@ require './lib/webserver.rb'
 
 Dir["./plugins/*.rb"].each {|file| require file }
 
-config = Conf.new(YAML.load_file("./config/config.yaml"))
-
-p config
+$config = Conf.new(YAML.load_file("./config/config.yaml"))
 
 $sheepy = Cinch::Bot.new do
   configure do |c|
-    c.server          = config.bot.server
-    c.port            = config.bot.port
-    c.nick            = config.bot.nick
-    c.channels        = config.bot.channels
-    c.verbose         = config.bot.verbose
+    c.server          = $config.bot.server
+    c.port            = $config.bot.port
+    c.nick            = $config.bot.nick
+    c.channels        = $config.bot.channels
+    c.verbose         = $config.bot.verbose
     c.plugins.plugins = [Help, Google, Youtube, Map, IMDb]
   end
 
