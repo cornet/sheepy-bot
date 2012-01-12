@@ -25,3 +25,5 @@ Check out config/config.yaml
 ## Contribute
 
 If you would like to contribute to sheepy then fork the project, implement your feature/plugin on a new branch and send a pull request.
+
+Tests are good, please write them.
