@@ -17,7 +17,7 @@ sheepy = Cinch::Bot.new do
     c.nick            = config.bot.nick
     c.channels        = config.bot.channels
     c.verbose         = config.bot.verbose
-    c.plugins.plugins = [Help, Google, Youtube]
+    c.plugins.plugins = [Help, Google, Youtube, Map]
   end
 
   on :message, "hello" do |m|
