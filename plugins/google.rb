@@ -17,8 +17,8 @@ class Google
     title = res.text
     link = res.at('a')[:href]
     CGI.unescape_html "#{title} : #{link}"
-  rescue
-    "No results found"
+  rescue Exception => e
+    e.message
   end
 
   def execute(m, query)

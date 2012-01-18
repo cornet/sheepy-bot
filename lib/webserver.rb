@@ -10,4 +10,8 @@ class WebServer < Sinatra::Base
     "Hello From Sheepy"
 
   end
+
+  get '/plugin/:name/:query' do
+    Google.search(params[:query])
+  end
 end
