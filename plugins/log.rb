@@ -10,7 +10,6 @@ class Log
     super
     @log = {}
     $config.bot.channels.each do |chan|
-      puts chan
       @log[chan] = File.open("#{$config.log.dir}/#{chan}.log", "a")
     end
   end
