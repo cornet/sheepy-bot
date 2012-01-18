@@ -4,3 +4,6 @@ bot:
     nick:     sheepy
     channels: ['#sheepy']
     verbose:  true
+
+log:
+    dir: logs
